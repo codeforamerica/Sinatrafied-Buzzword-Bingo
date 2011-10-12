@@ -20,10 +20,8 @@ body {
 }
 
 #wrapper {
-	width: 700px;
 	margin: 0px auto;
 	text-align: left;
-	padding: 15px;
 }
 
 table {
@@ -41,7 +39,7 @@ td {
     padding: 1em;
     height: 140px;
     font-size: 2em;
-    
+    width: 20%;
 }
 
 #slickbox {
@@ -54,13 +52,13 @@ td {
     margin: 6px 0px 10px 0px;
 }
 
-p {
-	padding-top: 1em;
-}
+
 
 h1 {
 	font-size: 2em;
 	padding: 0px 0px 10px 0px;
+	text-align: center;
+	width: 100%;
 }
 
 .selected {
