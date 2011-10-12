@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="main.css" type="text/css" media="all" />
     <script type="text/JavaScript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
     <script type="text/JavaScript" src="slicker.js"></script>
+    <script type="text/JavaScript" src="abhi.js"></script>
+    
 </head>
 <body>
 
@@ -21,35 +23,35 @@
 
 <tr>
 <% @bwr1.each do |word| %>
-  <td> <input type="checkbox"> <%= word %> </td>
+  <td> <span type="checkbox"> <%= word %> </td>
 <% end %>
 </tr>
 
 <tr>
 <% @bwr2.each do |word| %>
-  <td> <input type="checkbox"> <%= word %> </td>
+  <td> <span type="checkbox"> <%= word %> </td>
 <% end %>
 </tr>
 
 <tr>
 <% @bwr3a.each do |word| %>
-  <td> <input type="checkbox"> <%= word %> </td>
+  <td> <span type="checkbox"> <%= word %> </td>
 <% end %>
 <td style="background: #dfdfdf;">BINGO!</td>
 <% @bwr3b.each do |word| %>
-  <td> <input type="checkbox"> <%= word %> </td>
+  <td> <span type="checkbox"> <%= word %> </td>
 <% end %>
 </tr>
 
 <tr>
 <% @bwr4.each do |word| %>
-  <td> <input type="checkbox"> <%= word %> </td>
+  <td> <span type="checkbox"> <%= word %> </td>
 <% end %>
 </tr>
 
 <tr>
 <% @bwr5.each do |word| %>
-  <td> <input type="checkbox"> <%= word %> </td>
+  <td> <span type="checkbox"> <%= word %> </td>
 <% end %>
 </tr>
 
@@ -68,7 +70,7 @@
 <% end %>
 </div>
 
-<p> Want to add words? Send them to Brian.  </p>
+<p> Want to add wordspans? Send them to Brian.  </p>
 
 </div> <!-- wrapper -->
 
