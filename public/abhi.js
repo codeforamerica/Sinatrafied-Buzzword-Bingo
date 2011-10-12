@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    $("td").click(function(e) {
+    $(".bingoSquare").click(function(e) {
         $(e.currentTarget).toggleClass("selected");
     }
     )

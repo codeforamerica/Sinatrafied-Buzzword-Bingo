@@ -1,71 +1,152 @@
-
-root { 
-    display: block;
-}
-
-* {
-    border: 0px solid #cfcfcf;
-    padding: 0px;
-    margin: 0px;
-}
-
-body {
-	/* font-family: Arial, "MS Trebuchet", sans-serif; */
-	font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-	color: #333;
-	background: #fff;
-	margin: 0px 0px;
-	padding: 0px;
-	background-color: #fff;
-}
-
-#wrapper {
-	margin: 0px auto;
-	text-align: left;
-}
-
-table {
-	width: 100%;
-	max-width: 800px;
-	border: 1px solid #afafaf;
-	border-spacing: 2px;
-	border-radius: 3px;
-    
-}
-
-td {
-    border: 1px solid #f0f0f0;
-    border-radius: 3px 3px 3px;
-    padding: 1em;
-    height: 140px;
-    font-size: 2em;
-    width: 20%;
+/* v1.0 | 20080212 */
+html,body,div,span,applet,object,iframe,
+h1,h2,h3,h4,h5,h6,p,blockquote,pre,
+a,abbr,acronym,address,big,cite,code,
+del,dfn,em,font,img,ins,kbd,q,s,samp,
+small,strike,strong,sub,sup,tt,var,
+b,u,i,center,
+dl,dt,dd,ol,ul,li,
+fieldset,form,label,legend,
+table,caption,tbody,tfoot,thead,tr,th,td{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}
+body{line-height:1;}
+ol,ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,
+q:before,q:after{content:'';content:none;}
+/* remember to define focus styles! */
+:focus{outline:0;}
+/* remember to highlight inserts somehow! */
+ins{text-decoration:none;}
+del{text-decoration:line-through;}
+/* tables still need 'cellspacing="0"' in the markup */
+table{border-collapse:collapse;border-spacing:0;}
+/*
+Variable Grid System.
+Learn more ~ http://www.spry-soft.com/grids/
+Based on 960 Grid System - http://960.gs/
+Licensed under GPL and MIT.
+*/
+/*
+Forces backgrounds to span full width,
+even if there is horizontal scrolling.
+Increase this if your layout is wider.
+Note:IE6 works fine without this fix.
+*/
+body{min-width:320px;}
+/* Containers
+----------------------------------------------------------------------------------------------------*/
+.container_5{margin-left:auto;margin-right:auto;width:320px;}
+/* Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+.grid_1,
+.grid_2,
+.grid_3,
+.grid_4,
+.grid_5{display:inline;float:left;position:relative;margin-left:2px;margin-right:2px;}
+.push_1,.pull_1,
+.push_2,.pull_2,
+.push_3,.pull_3,
+.push_4,.pull_4,
+.push_5,.pull_5{position:relative;}
+/* Grid >> Children (Alpha ~ First,Omega ~ Last)
+----------------------------------------------------------------------------------------------------*/
+.alpha{margin-left:0;}
+.omega{margin-right:0;}
+/* Grid >> 5 Columns
+----------------------------------------------------------------------------------------------------*/
+.container_5 .grid_1{width:60px;}
+.container_5 .grid_2{width:124px;}
+.container_5 .grid_3{width:188px;}
+.container_5 .grid_4{width:252px;}
+.container_5 .grid_5{width:316px;}
+/* Prefix Extra Space >> 5 Columns
+----------------------------------------------------------------------------------------------------*/
+.container_5 .prefix_1{padding-left:64px;}
+.container_5 .prefix_2{padding-left:128px;}
+.container_5 .prefix_3{padding-left:192px;}
+.container_5 .prefix_4{padding-left:256px;}
+/* Suffix Extra Space >> 5 Columns
+----------------------------------------------------------------------------------------------------*/
+.container_5 .suffix_1{padding-right:64px;}
+.container_5 .suffix_2{padding-right:128px;}
+.container_5 .suffix_3{padding-right:192px;}
+.container_5 .suffix_4{padding-right:256px;}
+/* Push Space >> 5 Columns
+----------------------------------------------------------------------------------------------------*/
+.container_5 .push_1{left:64px;}
+.container_5 .push_2{left:128px;}
+.container_5 .push_3{left:192px;}
+.container_5 .push_4{left:256px;}
+/* Pull Space >> 5 Columns
+----------------------------------------------------------------------------------------------------*/
+.container_5 .pull_1{left:-64px;}
+.container_5 .pull_2{left:-128px;}
+.container_5 .pull_3{left:-192px;}
+.container_5 .pull_4{left:-256px;}
+/* `Clear Floated Elements
+----------------------------------------------------------------------------------------------------*/
+/* http://sonspring.com/journal/clearing-floats */
+.clear{clear:both;display:block;overflow:hidden;visibility:hidden;width:0;height:0;}
+/* http://www.yuiblog.com/blog/2010/09/27/clearfix-reloaded-overflowhidden-demystified */
+.clearfix:before,
+.clearfix:after{content:'\0020';display:block;overflow:hidden;visibility:hidden;width:0;height:0;}
+.clearfix:after{clear:both;}
+/*
+The following zoom:1 rule is specifically for IE6 + IE7.
+Move to separate stylesheet if invalid CSS is a problem.
+*/
+.clearfix{zoom:1;}
+body{background-color:rgb(3,12,17);background:transparent url(imagemap.png) -120px 0px 60px 60px no-repeat;}
+.body{min-height:416px;width:320px;position:absolute;left:50%;top:50%;margin-top:-178px;margin-left:-159px;}
+.disableAnimation{-webkit-transition-duration:0s !important;}
+.body{width:320px !important;min-height:400px;}
+.page{background-color:green;}
+.header,.buttonRow{font-size:16pt;font-family:HelveticaNeue-Light,'Helvetica Neue Light','Helvetica Neue',Helvetica,Arial,sans-serif;text-align:center;margin-bottom:8px;color:#E0E0E0;text-shadow:black 0px 1px 1px;min-height:26px;padding-top:6px;-webkit-user-select:none;-khtml-user-select:none;-moz-user-select:none;-o-user-select:none;user-select:none;}
+.header{padding-top:6px;}
+.header strong,.buttonRow strong{font-family:Helvetica,sans-serif;}
+.bingoSquare{height:60px;margin-bottom:4px;font-size:9pt;font-family:Helvetica,sans-serif;color:#AAC;position:relative;-webkit-transition-duration:1s;-webkit-transform-style:preserve-3d;-webkit-perspective:1000;-webkit-user-select:none;}
+.bingoSquare.flipping{-webkit-transform:rotateY(360deg);}
+.bingoSquare.flippingRepeatedly{-webkit-transition-duration:2.0s;-webkit-transform:rotateY(1080deg);}
+/*
+.bingoSquare.unflipping{-webkit-transform:rotateY(360deg);}
+.bingoSquare.unflippingRepeatedly{-webkit-transition-duration:1.0s;-webkit-transform:rotateY(1080deg);}
+*/
+.bingoSquare.freeSquare.flipping,.bingoSquare.freeSquare.flippingRepeatedly{-webkit-transform:rotateY(0deg);-webkit-transition-duration:0s;}
+.bingoSquareFront{background-color:#282833;border-radius:4px;-webkit-transform:rotateY(0deg);-webkit-backface-visibility:hidden;z-index:100;width:100%;height:100%;position:absolute;left:0px;top:0px;}
+.bingoSquareBack{-webkit-transform:rotateY(180deg);-webkit-backface-visibility:hidden;background-image:url(imagemap.png);background-position:-120px -60px;width:100%;height:100%;position:absolute;left:0px;top:0px;z-index:10;}
+.bingoSquare .contents{margin:4px;text-align:center;vertical-align:middle;display:table;width:52px;height:52px;}
+.bingoSquare .contents p{display:table-cell;vertical-align:middle;text-align:center;}
+.bingoSquare.selected .bingoSquareFront{background-color:#383848;}
+.bingoSquare.freeSquare .bingoSquareFront{background-color:#183838;}
+.buttonRow{margin-left:-1px;}
+.button{border-radius:10px;text-align:center;font-size:16pt;font-family:Helvetica,sans-serif;color:#EEE;padding-top:12px;min-height:34px;-webkit-box-shadow:3px 3px 6px rgba(0,0,0,.20),
+0px 0px 3px rgba(0,0,0,.40),
+text-shadow:black 0px 1px 1px;background-image:-webkit-gradient(
+linear,
+left top,
+left bottom,
+color-stop(0.37,rgb(30,55,84)),
+color-stop(0.66,rgb(24,51,69))
+);}
+.button.inactive{background:none;}
+@media screen and (-webkit-min-device-pixel-ratio:2){.bingoSquareBack{background:transparent url(imagemap.png) 0px 0px 66% 100% no-repeat;}
 }
 
 #slickbox {
-    text-align: left;
+    text-align: center;
     /* font-size: 0.8em; */
     font-size: 0.8em;
-    border: 1px solid #afafaf;
-    background-color: #fff;
+    border: none
+    background-color: transparent;
     padding: 12px;
+    color: white;
     margin: 6px 0px 10px 0px;
 }
 
 
-
-h1 {
-	font-size: 2em;
-	padding: 0px 0px 10px 0px;
-	text-align: center;
-	width: 100%;
-}
-
-.selected {
-    background-color: salmon;
-}
-
-.selected:hover {
-    cursor:pointer;
-    cursor: hand;
+a {text-decoration: none;
+    color: white;}
+    
+.logo img {
+    margin-top: 10px;
 }

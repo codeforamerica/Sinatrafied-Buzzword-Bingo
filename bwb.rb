@@ -1,7 +1,7 @@
 require 'erb'
 
 get '/' do
-  @title = 'Sinatrified Buzzword Bingo'
+  @title = 'CfA Summit Buzzword Bingo'
 
   # make an array here to reveal in erb template
   # TODO: make the array stuff presentable

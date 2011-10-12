@@ -15,66 +15,95 @@
 </head>
 <body>
 
-<div id="wrapper">
-	<h1><%= @title %></h1>
+    <div class="grid_5 body">
+    	<div class="header"><%= @title %></div>
 
+    <div class="container_5 bingoCard">
 
-<!-- TODO: put this in the card table -->
-<form>
-<table border="0">
-
-<tr>
 <% @bwr1.each do |word| %>
-  <td> <span type="checkbox"> <%= word %> </td>
+  <div class="grid_1 bingoSquare">
+        <div class="bingoSquareFront"> 
+                <div class="contents">
+                    <p class="cardContents">
+                        <span type="checkbox"> <%= word %> </span>
+                        </p>
+                </div>
+        </div>
+  </div>
 <% end %>
-</tr>
 
-<tr>
 <% @bwr2.each do |word| %>
-  <td> <span type="checkbox"> <%= word %> </td>
-<% end %>
-</tr>
+    <div class="grid_1 bingoSquare">
+           <div class="bingoSquareFront"> 
+                   <div class="contents">
+                       <p class="cardContents">
+                           <span type="checkbox"> <%= word %> </span>
+                           </p>
+                   </div>
+           </div>
+     </div><% end %>
 
-<tr>
 <% @bwr3a.each do |word| %>
-  <td> <span type="checkbox"> <%= word %> </td>
-<% end %>
-<td style="background: #dfdfdf;">BINGO!</td>
-<% @bwr3b.each do |word| %>
-  <td> <span type="checkbox"> <%= word %> </td>
-<% end %>
-</tr>
+    <div class="grid_1 bingoSquare">
+           <div class="bingoSquareFront"> 
+                   <div class="contents">
+                       <p class="cardContents">
+                           <span type="checkbox"> <%= word %> </span>
+                           </p>
+                   </div>
+           </div>
+     </div>
+     <% end %>
+     <div class="grid_1 bingoSquare">
+            <div class="bingoSquareFront"> 
+                    <div class="contents">
+                        <p class="cardContents">
+                            <span type="checkbox"> BINGO </span>
+                            </p>
+                    </div>
+            </div>
+      </div>
+      
+     <% @bwr3b.each do |word| %>
+         <div class="grid_1 bingoSquare">
+                <div class="bingoSquareFront"> 
+                        <div class="contents">
+                            <p class="cardContents">
+                                <span type="checkbox"> <%= word %> </span>
+                                </p>
+                        </div>
+                </div>
+          </div><% end %>
 
-<tr>
 <% @bwr4.each do |word| %>
-  <td> <span type="checkbox"> <%= word %> </td>
-<% end %>
-</tr>
+    <div class="grid_1 bingoSquare">
+           <div class="bingoSquareFront"> 
+                   <div class="contents">
+                       <p class="cardContents">
+                           <span type="checkbox"> <%= word %> </span>
+                           </p>
+                   </div>
+           </div>
+     </div>
+     <% end %>
 
-<tr>
+
 <% @bwr5.each do |word| %>
-  <td> <span type="checkbox"> <%= word %> </td>
-<% end %>
-</tr>
-
-</table>
-</form>
-
-<p> <a href="/">Generate a new card</a> </p>
-
-<p>
-<a href="#" id="slick-toggle">Toggle full word list</a>
-</p>
-<div id="slickbox">
-
-<% @sortedbuzz.each do |word| %>
-<%= word %>,
-<% end %>
+    <div class="grid_1 bingoSquare">
+           <div class="bingoSquareFront"> 
+                   <div class="contents">
+                       <p class="cardContents">
+                           <span type="checkbox"> <%= word %> </span>
+                           </p>
+                   </div>
+           </div>
+     </div>
+     <% end %>
 </div>
 
-<p> Want to add wordspans? Send them to Brian.  </p>
+<p align="center" class="logo" style="margin: 10px 0px 0px 10px;"><img src="logo.png" width="200px" align="center"></p>
 
-</div> <!-- wrapper -->
+</div> 
 
 </body>
 </html>
